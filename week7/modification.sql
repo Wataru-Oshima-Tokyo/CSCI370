@@ -1,0 +1,25 @@
+SET FOREIGN_KEY_CHECKS=0;
+Insert into EMPLOYEE values 
+('Robert', 'F', 'Scott', '943775543', '1972-06-21', '2365 NewcastleRd, Bellaire, TX', M, 58000, '888665555', 1);
+
+Insert into PROJECT values 
+('ProductA', 4, 'Bellaire', 2);
+
+INSERT INTO DEPARTMENT VALUES
+('Production', 4, '943775543', '2007-10-01');
+
+INSERT INTO WORKS_ON VALUES
+('677678989', NULL, '40.0');
+
+
+INSERT INTO DEPENDENT VALUES
+('453453453', 'John', 'M', '1990-12-12', 'spouse');
+
+
+DELETE FROM WORKS_ON where Essn='333445555';
+DELETE FROM EMPLOYEE where Ssn='987654321';
+DELETE FROM PROJECT where Pname='ProductX';
+UPDATE DEPARTMENT SET Mgr_ssn='123456789', Mgr_start_date='2007-10-01' where Dnumber=5;
+UPDATE EMPLOYEE SET Ssn='943775543' where Ssn='999887777';
+UPDATE WORKS_ON SET Hours=5.0 where Essn='999887777' and Pno=10;
+SET FOREIGN_KEY_CHECKS=1;

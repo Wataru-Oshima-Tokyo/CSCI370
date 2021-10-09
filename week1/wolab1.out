@@ -1,0 +1,83 @@
+MySQL [woshima]> source ./wolab1.sql
+Database changed
+Query OK, 0 rows affected (0.021 sec)
+
+Query OK, 0 rows affected (0.018 sec)
+
+Query OK, 0 rows affected (0.017 sec)
+
+Query OK, 0 rows affected (0.019 sec)
+
+Query OK, 0 rows affected (0.017 sec)
+
+Query OK, 0 rows affected (0.016 sec)
+
+Query OK, 7 rows affected (0.010 sec)
+Records: 7  Duplicates: 0  Warnings: 0
+
+MySQL [woshima]> \t
+MySQL [(none)]> source ./wolab1.sql
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+Query OK, 0 rows affected (0.019 sec)
+
+Query OK, 0 rows affected (0.013 sec)
+
+Query OK, 0 rows affected, 1 warning (0.001 sec)
+
+Query OK, 0 rows affected (0.021 sec)
+
+Query OK, 0 rows affected (0.017 sec)
+
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| isbn         | char(20)    | NO   | PRI | NULL    |       |
+| title        | varchar(50) | YES  |     | NULL    |       |
+| author_id    | int(11)     | YES  |     | NULL    |       |
+| publisher_id | int(11)     | YES  |     | NULL    |       |
+| year_pub     | char(4)     | YES  |     | NULL    |       |
+| description  | text        | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+6 rows in set (0.013 sec)
+
+Query OK, 1 row affected (0.011 sec)
+
+Query OK, 1 row affected (0.004 sec)
+
++------------+
+| title      |
++------------+
+| The Castle |
++------------+
+1 row in set (0.001 sec)
+
++------------+
+| title      |
++------------+
+| The Castle |
++------------+
+1 row in set (0.001 sec)
+
++------------+-----------+
+| title      | name_last |
++------------+-----------+
+| The Castle | Kafka     |
++------------+-----------+
+1 row in set (0.001 sec)
+
++-------------+
+| Kafka Books |
++-------------+
+| The Castle  |
++-------------+
+1 row in set (0.001 sec)
+
+Query OK, 0 rows affected (0.001 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.001 sec)
+
+MySQL [woshima]> \t

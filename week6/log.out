@@ -1,0 +1,149 @@
+MySQL [(none)]> source G6_lab5_DDL.sql
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+Query OK, 0 rows affected (0.001 sec)
+
+Query OK, 0 rows affected (0.016 sec)
+
+Query OK, 0 rows affected (0.017 sec)
+
+Query OK, 0 rows affected (0.020 sec)
+
+Query OK, 0 rows affected (0.014 sec)
+
+Query OK, 0 rows affected (0.016 sec)
+
+Query OK, 0 rows affected (0.016 sec)
+
+Query OK, 0 rows affected (0.016 sec)
+
+Query OK, 0 rows affected (0.015 sec)
+
+Query OK, 0 rows affected (0.001 sec)
+
+Query OK, 0 rows affected (0.006 sec)
+
+Query OK, 0 rows affected (0.006 sec)
+
+Query OK, 0 rows affected (0.006 sec)
+
+Query OK, 5 rows affected (0.004 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+Query OK, 5 rows affected (0.009 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+Query OK, 5 rows affected (0.009 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+Query OK, 4 rows affected (0.008 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+MySQL [woshima]> source showthem.sh
++-------------------+
+| Tables_in_woshima |
++-------------------+
+| BILL              |
+| CONGRESS_PERSON   |
+| DEPARTMENT        |
+| DEPENDENT         |
+| DEPT_LOCATIONS    |
+| EMPLOYEE          |
+| PROJECT           |
+| STATE             |
+| VOTES_ON          |
+| WORKS_ON          |
++-------------------+
+10 rows in set (0.004 sec)
+
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| Name       | varchar(15) | NO   | PRI | NULL    |       |
+| Age        | int(11)     | YES  |     | NULL    |       |
+| Party      | varchar(15) | YES  |     | NULL    |       |
+| District   | varchar(15) | YES  |     | NULL    |       |
+| Start_date | date        | YES  |     | NULL    |       |
+| Phone      | char(10)    | YES  |     | NULL    |       |
+| Fax        | char(10)    | YES  |     | NULL    |       |
+| Email      | varchar(30) | NO   | PRI | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+8 rows in set (0.006 sec)
+
++---------------+-------------+------+-----+---------+-------+
+| Field         | Type        | Null | Key | Default | Extra |
++---------------+-------------+------+-----+---------+-------+
+| Name          | varchar(10) | NO   | PRI | NULL    |       |
+| Num_districts | int(11)     | YES  |     | NULL    |       |
+| Abbrev        | char(2)     | YES  |     | NULL    |       |
+| Population    | int(11)     | YES  |     | NULL    |       |
+| CP_name       | varchar(15) | NO   | MUL | NULL    |       |
+| Region        | varchar(15) | YES  |     | NULL    |       |
++---------------+-------------+------+-----+---------+-------+
+6 rows in set (0.006 sec)
+
++------------------+-------------+------+-----+---------+-------+
+| Field            | Type        | Null | Key | Default | Extra |
++------------------+-------------+------+-----+---------+-------+
+| Bill_name        | varchar(15) | NO   | PRI | NULL    |       |
+| Date_of_vote     | date        | YES  |     | NULL    |       |
+| Passed_or_failed | varchar(6)  | YES  |     | NULL    |       |
+| Sponsor          | varchar(15) | NO   | MUL | NULL    |       |
++------------------+-------------+------+-----+---------+-------+
+4 rows in set (0.006 sec)
+
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| CP_name | varchar(15) | NO   | MUL | NULL    |       |
+| Bill_ID | varchar(15) | NO   | MUL | NULL    |       |
+| Vote    | varchar(6)  | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+3 rows in set (0.006 sec)
+
++------+------+------------+----------+------------+------------+------------+--------------+
+| Name | Age  | Party      | District | Start_date | Phone      | Fax        | Email        |
++------+------+------------+----------+------------+------------+------------+--------------+
+| abcd |   50 | Republican | 1        | 1999-01-20 | 5129120984 | 1231459801 | abcd@abc.com |
+| bcde |   53 | Democrat   | 3        | 1997-02-10 | 1123120489 | 2314598012 | bcde@abc.com |
+| cdef |   80 | Republican | 5        | 1980-06-28 | 3127910683 | 1031469904 | cdef@abc.com |
+| defg |   72 | Democrat   | 17       | 1986-02-28 | 1127130672 | 1351974202 | defg@abc.com |
+| efgh |   57 | Republican | 4        | 1995-01-20 | 4175130786 | 2241569703 | efgh@abc.com |
++------+------+------------+----------+------------+------------+------------+--------------+
+5 rows in set (0.002 sec)
+
++------------+---------------+--------+------------+---------+-----------+
+| Name       | Num_districts | Abbrev | Population | CP_name | Region    |
++------------+---------------+--------+------------+---------+-----------+
+| California |            40 | CA     |    1800000 | abcd    | West      |
+| Florida    |            40 | FL     |     500000 | efgh    | Southwest |
+| Nebraska   |            49 | NE     |    1750000 | defg    | Midwest   |
+| Oregon     |            30 | OR     |    1000000 | bcde    | West      |
+| Texas      |            31 | TX     |    2000000 | cdef    | Southwest |
++------------+---------------+--------+------------+---------+-----------+
+5 rows in set (0.001 sec)
+
++-----------+--------------+------------------+---------+
+| Bill_name | Date_of_vote | Passed_or_failed | Sponsor |
++-----------+--------------+------------------+---------+
+| 1st Bill  | 2019-02-25   | PASSED           | abcd    |
+| 2nd Bill  | 2020-01-01   | PASSED           | bcde    |
+| 3rd Bill  | 2020-09-20   | FAILED           | cdef    |
+| 4th Bill  | 2020-12-25   | FAILED           | defg    |
++-----------+--------------+------------------+---------+
+4 rows in set (0.001 sec)
+
++---------+---------+------+
+| CP_name | Bill_ID | Vote |
++---------+---------+------+
+| abcd    | 1       | Yes  |
+| cdef    | 2       | No   |
+| abcd    | 2       | Yes  |
+| efgh    | 10      | Yes  |
+| defg    | 999999  | No   |
++---------+---------+------+
+5 rows in set (0.001 sec)
+
+MySQL [woshima]> exit

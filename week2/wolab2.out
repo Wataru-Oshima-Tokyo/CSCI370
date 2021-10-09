@@ -1,0 +1,222 @@
+MySQL [(none)]> source wolab2.sql
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
++-----+-------------------------+
+| pid | pname                   |
++-----+-------------------------+
+|   1 | Oxford University Press |
+|   2 | Bantam Classics         |
+|   3 | Everyman's Library      |
+|   4 | Vintage                 |
+|   5 | Schocken                |
++-----+-------------------------+
+5 rows in set (0.001 sec)
+
++------------+--------+--------+
+| isbn       | pub_id | pub_yr |
++------------+--------+--------+
+| 0192834118 |      1 | 1998   |
+| 0553211757 |      2 | 1984   |
+| 0553212168 |      2 | 1984   |
+| 0553213695 |      2 | 1972   |
+| 0679420290 |      3 | 1993   |
+| 067973452X |      4 | 1993   |
+| 0805210407 |      5 | 1956   |
+| 0805210644 |      5 | 1996   |
+| 0805211063 |      5 | 1998   |
++------------+--------+--------+
+9 rows in set (0.001 sec)
+
++-------------+----------------+
+| author_last | country        |
++-------------+----------------+
+| Kafka       | Czech Republic |
+| Dostoevsky  | Russian        |
++-------------+----------------+
+2 rows in set (0.001 sec)
+
++------------------------+-------------+----------------+
+| title                  | author_last | country        |
++------------------------+-------------+----------------+
+| Idiot                  | Dostoevsky  | Russian        |
+| Crime & Punishment     | Dostoevsky  | Russian        |
+| Brothers Karamozov     | Dostoevsky  | Russian        |
+| The Metamorphosis      | Kafka       | Czech Republic |
+| Crime & Punishment     | Dostoevsky  | Russian        |
+| Notes from Underground | Dostoevsky  | Russian        |
+| The Trial              | Kafka       | Czech Republic |
+| Amerika                | Kafka       | Czech Republic |
+| The Castle             | Kafka       | Czech Republic |
++------------------------+-------------+----------------+
+9 rows in set (0.002 sec)
+
++-------------------------+------------+
+| pname                   | isbn       |
++-------------------------+------------+
+| Oxford University Press | 0192834118 |
+| Bantam Classics         | 0553211757 |
+| Bantam Classics         | 0553212168 |
+| Bantam Classics         | 0553213695 |
+| Everyman's Library      | 0679420290 |
+| Vintage                 | 067973452X |
+| Schocken                | 0805210407 |
+| Schocken                | 0805210644 |
+| Schocken                | 0805211063 |
++-------------------------+------------+
+9 rows in set (0.001 sec)
+
++------------+-------------+------------+------------+
+| name_first | author_last | isbn       | title      |
++------------+-------------+------------+------------+
+| Franz      | Kafka       | 0805211063 | The Castle |
++------------+-------------+------------+------------+
+1 row in set (0.002 sec)
+
++--------------------+------------+
+| title              | isbn       |
++--------------------+------------+
+| Crime & Punishment | 0553211757 |
+| Crime & Punishment | 0679420290 |
++--------------------+------------+
+2 rows in set (0.001 sec)
+
++------------------------+------+
+| title                  | orig |
++------------------------+------+
+| Notes from Underground | 1918 |
+| Brothers Karamozov     | 1880 |
+| Idiot                  | 1869 |
+| Crime & Punishment     | 1866 |
+| Crime & Punishment     | 1866 |
++------------------------+------+
+5 rows in set (0.001 sec)
+
+MySQL [woshima]> \t
+MySQL [(none)]> source wolab2.sql
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+Query OK, 0 rows affected (0.018 sec)
+
+Query OK, 0 rows affected (0.016 sec)
+
+Query OK, 0 rows affected (0.012 sec)
+
+Query OK, 0 rows affected (0.016 sec)
+
+Query OK, 0 rows affected (0.012 sec)
+
+Query OK, 0 rows affected (0.019 sec)
+
+Query OK, 0 rows affected (0.011 sec)
+
+Query OK, 0 rows affected (0.016 sec)
+
+Query OK, 2 rows affected (0.010 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+Query OK, 6 rows affected (0.014 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+Query OK, 3 rows affected (0.006 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+Query OK, 9 rows affected (0.011 sec)
+Records: 9  Duplicates: 0  Warnings: 0
+
+Query OK, 5 rows affected (0.009 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
++-----+-------------------------+
+| pid | pname                   |
++-----+-------------------------+
+|   1 | Oxford University Press |
+|   2 | Bantam Classics         |
+|   3 | Everyman's Library      |
+|   4 | Vintage                 |
+|   5 | Schocken                |
++-----+-------------------------+
+5 rows in set (0.002 sec)
+
++------------+--------+--------+
+| isbn       | pub_id | pub_yr |
++------------+--------+--------+
+| 0192834118 |      1 | 1998   |
+| 0553211757 |      2 | 1984   |
+| 0553212168 |      2 | 1984   |
+| 0553213695 |      2 | 1972   |
+| 0679420290 |      3 | 1993   |
+| 067973452X |      4 | 1993   |
+| 0805210407 |      5 | 1956   |
+| 0805210644 |      5 | 1996   |
+| 0805211063 |      5 | 1998   |
++------------+--------+--------+
+9 rows in set (0.001 sec)
+
++-------------+----------------+
+| author_last | country        |
++-------------+----------------+
+| Kafka       | Czech Republic |
+| Dostoevsky  | Russian        |
++-------------+----------------+
+2 rows in set (0.001 sec)
+
++------------------------+-------------+----------------+
+| title                  | author_last | country        |
++------------------------+-------------+----------------+
+| Idiot                  | Dostoevsky  | Russian        |
+| Crime & Punishment     | Dostoevsky  | Russian        |
+| Brothers Karamozov     | Dostoevsky  | Russian        |
+| The Metamorphosis      | Kafka       | Czech Republic |
+| Crime & Punishment     | Dostoevsky  | Russian        |
+| Notes from Underground | Dostoevsky  | Russian        |
+| The Trial              | Kafka       | Czech Republic |
+| Amerika                | Kafka       | Czech Republic |
+| The Castle             | Kafka       | Czech Republic |
++------------------------+-------------+----------------+
+9 rows in set (0.001 sec)
+
++-------------------------+------------+
+| pname                   | isbn       |
++-------------------------+------------+
+| Oxford University Press | 0192834118 |
+| Bantam Classics         | 0553211757 |
+| Bantam Classics         | 0553212168 |
+| Bantam Classics         | 0553213695 |
+| Everyman's Library      | 0679420290 |
+| Vintage                 | 067973452X |
+| Schocken                | 0805210407 |
+| Schocken                | 0805210644 |
+| Schocken                | 0805211063 |
++-------------------------+------------+
+9 rows in set (0.001 sec)
+
++------------+-------------+------------+------------+
+| name_first | author_last | isbn       | title      |
++------------+-------------+------------+------------+
+| Franz      | Kafka       | 0805211063 | The Castle |
++------------+-------------+------------+------------+
+1 row in set (0.001 sec)
+
++--------------------+------------+
+| title              | isbn       |
++--------------------+------------+
+| Crime & Punishment | 0553211757 |
+| Crime & Punishment | 0679420290 |
++--------------------+------------+
+2 rows in set (0.001 sec)
+
++------------------------+------+
+| title                  | orig |
++------------------------+------+
+| Notes from Underground | 1918 |
+| Brothers Karamozov     | 1880 |
+| Idiot                  | 1869 |
+| Crime & Punishment     | 1866 |
++------------------------+------+
+4 rows in set (0.002 sec)
+
+MySQL [woshima]> \t
